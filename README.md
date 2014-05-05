@@ -1,4 +1,4 @@
 Outo
 ====
 
-Outo is links outpot made we love PHP &lt;3
+A Very Simple PHP Open Source Web Addresses (URLs) Manager

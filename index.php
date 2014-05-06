@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Important notes:
  * 
@@ -33,35 +32,20 @@ if (!empty($_SERVER['REQUEST_URI']))
     {
         $file_name = 'home';
     }
-    
-    // Change the following to set title and description for every page in your site, and you
-    // can use these variables in the header if you are using layout (header & footer),
-    // otherwise just remove or comment out the following switch satement.
-    switch ($file_name) {
-        case 'banana':
-            $title = 'I love banana!';
-            $description = 'I love banana!';
-            break;
-        default:
-            // Used for the home page
-            $title = 'My lovely site!';
-            $description = 'You will fall in love with my site!';
-            break;
-    }
 
     // If the requested file is not exists, the 404 page (which must be in the "pages"
     // directory) will be rendered.
-    if (!file_exists($root . '/pages/' . $file_name . '.php'))
+    if (!file_exists($root . '/etc/', 'front-page/' . $file_name . '.php', '.html'))
     {
         header('HTTP/1.0 404 Not Found');
         $file_name = '404';
     }
 
     // Rendering the header
-    require_once $root . '/layout/header.php';
+    require_once $root . '/etc/header.php';
     // Rendering the requested page
-    require_once $root . '/pages/' . $file_name . '.php';
+    require_once $root . '/ect/', '/front-page/' . $file_name . '.php', '.html';
     // Rendering the footer
-    require_once $root . '/layout/footer.php';
+    require_once $root . '/etc/footer.php';
     exit;
 }

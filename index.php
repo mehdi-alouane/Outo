@@ -35,7 +35,7 @@ if (!empty($_SERVER['REQUEST_URI']))
 
     // If the requested file is not exists, the 404 page (which must be in the "pages"
     // directory) will be rendered.
-    if (!file_exists($root . '/etc/', 'front-page/' . $file_name . '.php', '.html'))
+    if (!file_exists($root . '/etc/',  . $file_name . '.php', '.html'))
     {
         header('HTTP/1.0 404 Not Found');
         $file_name = '404';
@@ -44,7 +44,7 @@ if (!empty($_SERVER['REQUEST_URI']))
     // Rendering the header
     require_once $root . '/etc/header.php';
     // Rendering the requested page
-    require_once $root . '/ect/', '/front-page/' . $file_name . '.php', '.html';
+    require_once $root . '/ect/',  . $file_name . '.php', '.html';
     // Rendering the footer
     require_once $root . '/etc/footer.php';
     exit;
